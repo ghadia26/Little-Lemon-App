@@ -1,17 +1,17 @@
 import './App.css';
+import Nav from './Nav';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
 function App() {
-  return (
-    <div className="App">
-      <nav>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Menu</a></li>
-    <li><a href="#">About</a></li>
-  </ul>
-</nav>
-     <h1>Welcome to Little Lemon Restaurant!</h1>
-    </div>
-  );
+ return (
+  <>
+    <Nav />
+    <Header />
+    <Main />
+    <Footer />
+  </>
+);
 }
 
 export default App;
