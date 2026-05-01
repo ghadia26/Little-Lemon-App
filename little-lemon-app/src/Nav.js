@@ -1,9 +1,9 @@
+import logo from './assets/logo.png'; // Ensure you have a logo in an assets folder
+
 function Nav() {
     return (
         <nav>
-            {/* Add the logo here as per Step 3 */}
-            <img src="/logo.png" alt="Little Lemon Logo" /> 
-            
+            <img src={logo} alt="Little Lemon Logo" />
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
