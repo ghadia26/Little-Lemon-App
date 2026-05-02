@@ -1,4 +1,4 @@
-/* --- Step 2: Global & Typography --- */
+/* --- GLOBAL RESET & BASE STYLING --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +6,15 @@
 }
 
 body {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Karla', sans-serif; /* Step 2: Primary Font */
     color: #333333;
 }
 
-/* Heading styles based on Little Lemon brand */
+/* --- STEP 2: HEADINGS & TYPOGRAPHY --- */
 h1 {
     font-family: 'Markazi Text', serif;
     font-size: 64pt;
-    color: #F4CE14; /* Primary Yellow */
+    color: #F4CE14; /* Little Lemon Yellow */
 }
 
 h2 {
@@ -32,10 +32,12 @@ h3 {
 p {
     font-family: 'Karla', sans-serif;
     font-size: 16pt;
-    color: #495E57; /* Primary Green */
+    line-height: 1.5;      /* Step 4: Line Height */
+    letter-spacing: 0.5px; /* Step 4: Letter Spacing */
+    color: #495E57;        /* Little Lemon Green */
 }
 
-/* --- Step 1 & 5: Layout Grid --- */
+/* --- STEP 1 & 5: LAYOUT GRID STRUCTURE --- */
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -46,7 +48,7 @@ p {
         "f f f f f f f f f f f f";
 }
 
-/* --- Step 3: Navigation Styling --- */
+/* --- STEP 3: NAVIGATION STYLING --- */
 nav {
     grid-area: n;
     display: flex;
@@ -67,10 +69,10 @@ nav li a {
     color: #333333;
 }
 
-/* --- Hero & Main Sections --- */
+/* --- SECTIONS (HERO & MAIN) --- */
 header {
     grid-area: h;
-    background-color: #495E57;
+    background-color: #495E57; /* Step 4: Background Color */
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 40px 10%;
@@ -85,24 +87,34 @@ main {
 .cards {
     display: flex;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: space-between; /* Step 4: Flexbox */
 }
 
-/* --- Step 4: Image & Article Styling --- */
+/* --- STEP 4: IMAGES, BORDERS & SHADOWS --- */
 img {
-    border-radius: 16px; /* Rounded corners as per Step 4 */
+    border-radius: 16px; /* Step 4: Border Radius */
     max-width: 100%;
     object-fit: cover;
 }
 
 article {
     background-color: #EDEFEE;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow as per Step 1 */
+    border-radius: 16px;              /* Step 4: Rounded Corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Step 1: CSS Shadow */
     flex: 1;
+    padding-bottom: 20px;
 }
 
-/* --- Step 6: Responsive Design --- */
+button {
+    background-color: #F4CE14;
+    border: none;
+    border-radius: 16px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- STEP 6: RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     header {
         grid-template-columns: 1fr;
@@ -110,13 +122,13 @@ article {
     }
 
     .cards {
-        flex-direction: column;
+        flex-direction: column; /* Stack cards on mobile */
     }
     
     h1 { font-size: 48pt; }
 }
 
-/* --- Footer --- */
+/* --- FOOTER --- */
 footer {
     grid-area: f;
     background-color: #333333;
